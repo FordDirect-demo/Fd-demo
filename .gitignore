@@ -1,0 +1,64 @@
+#target
+target
+
+#project
+*/.project
+.project
+
+#idea
+*/.idea/*
+.idea/
+
+#iml
+*.iml
+
+# class
+*/.class
+
+# npm-instal
+npm-install
+
+#ignoring all.css
+#*/all.css
+#all.css
+
+#bin
+bin
+
+#dir
+*.dir
+*/*.dir
+
+#DS_Store 
+.DS_Store
+*/.DS_Store
+
+#metadat
+.metadata
+
+#vlt
+.vlt
+
+#vlt-sync-config.properties
+.vlt-sync-config.properties
+
+#vlt-sync.log
+.vlt-sync.log
+
+#prefs
+*.prefs
+
+#classpath
+.classpath
+
+#vltignore
+.vltignore
+
+#brackets json used as root vault directory
+.brackets.json
+
+#ignore all files ending with ~
+*~
+
+#node_modules
+node_modules
