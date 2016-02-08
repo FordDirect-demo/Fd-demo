@@ -1,0 +1,58 @@
+#paginationTop {
+margin-bottom:35px;
+margin-left:150px;
+display:block;
+background-color:#E3E4E4
+	
+}
+
+.gray{
+color:#9F9E9E;	
+}
+
+.anchorNav {
+text-decoration: none;
+color:#367FB4;	
+cursor: pointer;	
+}
+
+#navlist li
+{
+display: inline;
+list-style-type: none;
+padding-right: 20px;
+}
+
+#alphabetH1 {
+color:#9F9E9E;
+font-size:26px;
+margin-bottom:20px;
+margin-left:205px;
+display:block;	
+}
+
+#loadingImg {
+display: none; 
+text-align: center;	
+}
+
+#glossaryCenter {
+margin-left:212px;
+display:block;	
+}
+
+#paginationBottom {
+margin-top:25px;
+margin-left:150px;
+display:block;
+background-color:#E3E4E4	
+}
+
+#page-glossary {
+display:block;
+margin-left:147px;
+}
+
+#description-para {
+	
+}

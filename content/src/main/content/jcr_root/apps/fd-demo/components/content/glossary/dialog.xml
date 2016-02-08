@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    height="{Long}600"
+    title="Configure Glossary"
+    width="{Long}600"
+    xtype="dialog">
+    <items
+        jcr:primaryType="cq:Widget"
+        xtype="tabpanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <glossary
+                jcr:primaryType="cq:Widget"
+                title="Glossary"
+                xtype="panel">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <glossary
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="Press + to add more"
+                        fieldLabel="Configure Glossary"
+                        name="./glossary"
+                        xtype="multifield">
+                        <fieldConfig
+                            jcr:primaryType="cq:Widget"
+                            name="./fieldConfig"
+                            xtype="multifieldpanel">
+                            <items jcr:primaryType="cq:WidgetCollection">
+                                <word
+                                    jcr:primaryType="cq:Widget"
+                                    fieldLabel="Word"
+                                    key="word"
+                                    width="{Long}700"
+                                    xtype="textfield"/>
+                                <text
+                                    jcr:primaryType="cq:Widget"
+                                    allowBlank="{Boolean}false"
+                                    externalStyleSheets="[/apps/mercer/components/common/detailText/clientlibs/css/custom.css]"
+                                    fieldLabel="Description"
+                                    key="description"
+                                    name="./text"
+                                    width="{Long}700"
+                                    xtype="richtext">
+                                    <rtePlugins jcr:primaryType="nt:unstructured">
+                                        <links jcr:primaryType="nt:unstructured">
+                                            <linkDialogConfig
+                                                jcr:primaryType="nt:unstructured"
+                                                height="{Long}316">
+                                                <linkAttributes jcr:primaryType="cq:WidgetCollection">
+                                                    <linkAdvanced
+                                                        jcr:primaryType="cq:Widget"
+                                                        collapsed="{Boolean}true"
+                                                        collapsible="{Boolean}true"
+                                                        inputValue="advanced"
+                                                        name="./linkdialog/cq:adhocLinkTrackingTab"
+                                                        title="Link tracking"
+                                                        xtype="dialogfieldset">
+                                                        <items jcr:primaryType="cq:WidgetCollection">
+                                                            <enable
+                                                                jcr:primaryType="nt:unstructured"
+                                                                attribute="enabletracking"
+                                                                fieldDescription="override analytics framework settings"
+                                                                fieldLabel="Custom link tracking"
+                                                                name="./linkdialog/cq:adhocLinkTrackingEnableTracking"
+                                                                xtype="checkbox">
+                                                                <listeners
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    check="function(component){var dlg=component.findParentByType('rtelinkdialog');dlg.enableSCFields(component.checked);}"/>
+                                                            </enable>
+                                                            <events
+                                                                jcr:primaryType="nt:unstructured"
+                                                                attribute="adhocevents"
+                                                                fieldDescription="e.g.: event2, event7"
+                                                                fieldLabel="Include SiteCatalyst events"
+                                                                name="./linkdialog/cq:adhocLinkTrackingEvents"
+                                                                xtype="textfield"/>
+                                                            <evars
+                                                                jcr:primaryType="nt:unstructured"
+                                                                attribute="adhocevars"
+                                                                fieldDescription="e.g.: eVar1: pagedata.url, prop4: 'const'"
+                                                                fieldLabel="Include SiteCatalyst variables"
+                                                                name="./linkdialog/cq:adhocLinkTrackingEvars"
+                                                                xtype="textfield"/>
+                                                        </items>
+                                                    </linkAdvanced>
+                                                </linkAttributes>
+                                            </linkDialogConfig>
+                                        </links>
+                                        <edit
+                                            jcr:primaryType="nt:unstructured"
+                                            features="*"/>
+                                        <findreplace
+                                            jcr:primaryType="nt:unstructured"
+                                            features="*"/>
+                                        <format
+                                            jcr:primaryType="nt:unstructured"
+                                            features="*"/>
+                                        <image
+                                            jcr:primaryType="nt:unstructured"
+                                            features="*"/>
+                                        <justify
+                                            jcr:primaryType="nt:unstructured"
+                                            features="*"/>
+                                        <lists
+                                            jcr:primaryType="nt:unstructured"
+                                            features="*"/>
+                                        <misctools
+                                            jcr:primaryType="nt:unstructured"
+                                            features="*"/>
+                                        <paraformat
+                                            jcr:primaryType="nt:unstructured"
+                                            features="*"/>
+                                        <spellcheck
+                                            jcr:primaryType="nt:unstructured"
+                                            features="*"/>
+                                        <styles
+                                            jcr:primaryType="nt:unstructured"
+                                            features="*"/>
+                                        <undo
+                                            jcr:primaryType="nt:unstructured"
+                                            features="*"/>
+                                        <thresholds
+                                            jcr:primaryType="nt:unstructured"
+                                            features="*"/>
+                                        <sunsuperscript
+                                            jcr:primaryType="nt:unstructured"
+                                            features="*"/>
+                                    </rtePlugins>
+                                </text>
+                            </items>
+                        </fieldConfig>
+                    </glossary>
+                </items>
+            </glossary>
+            <configurations
+                jcr:primaryType="cq:Widget"
+                title="Other Configurations"
+                xtype="panel">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <selectList
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="Property in the above dropdown defines the placement of pagination"
+                        fieldLabel="Configure pagination placement"
+                        name="./selectList"
+                        type="select"
+                        xtype="selection">
+                        <options jcr:primaryType="cq:WidgetCollection">
+                            <top
+                                jcr:primaryType="nt:unstructured"
+                                text="Top"
+                                value="top"/>
+                            <bottom
+                                jcr:primaryType="nt:unstructured"
+                                text="Bottom"
+                                value="bottom"/>
+                            <both
+                                jcr:primaryType="nt:unstructured"
+                                text="Both"
+                                value="both"/>
+                        </options>
+                    </selectList>
+                </items>
+            </configurations>
+        </items>
+    </items>
+</jcr:root>

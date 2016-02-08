@@ -62,3 +62,7 @@ bin
 
 #node_modules
 node_modules
+
+.settings
+
+install

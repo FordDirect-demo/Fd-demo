@@ -1,0 +1,33 @@
+<taglib>
+       <tlib-version>1.0</tlib-version>
+       <jsp-version>2.0</jsp-version>
+       <short-name>Glossary Taglib TLD</short-name>
+       <uri>http://www.fd.com/taglibs/1.0</uri>
+       <function>
+              <description>
+                  Returns the list of alphabets for pagination
+              </description>
+              <name>getPaginationList</name>
+              <function-class>com.fd.demo.taglibs.GlossaryTaglib</function-class>
+              <function-signature>java.util.Map getPaginationList(java.util.List)</function-signature>
+       </function>
+       
+       <function>
+              <description>
+                  Returns the items that start with an alphabet passed to the method as parameter
+              </description>
+              <name>getGlossaryItemsStartsWithChar</name>
+              <function-class>com.fd.demo.taglibs.GlossaryTaglib</function-class>
+              <function-signature>java.util.Map getGlossaryItemsStartsWithChar(java.util.List, java.lang.String)</function-signature>
+       </function>
+       
+        <function>
+              <description>
+                  Returns the glossary items in a sorted manner
+              </description>
+              <name>sortGlossaryItems</name>
+              <function-class>com.fd.demo.taglibs.GlossaryTaglib</function-class>
+              <function-signature>java.util.List sortGlossaryItems(java.util.List)</function-signature>
+       </function>
+        
+</taglib>
